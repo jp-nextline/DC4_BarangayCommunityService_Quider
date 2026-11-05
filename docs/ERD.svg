@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 600" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+<rect width="940" height="600" fill="#ffffff"/>
+<text x="30" y="26" font-size="16" font-weight="700" fill="#14284b">Community Service Request and Tracking System - ERD</text>
+<rect x="30" y="40" width="250" height="232" rx="6" fill="#f7f9fc" stroke="#14284b" stroke-width="1.5"/>
+<rect x="30" y="40" width="250" height="34" rx="6" fill="#14284b"/>
+<text x="42" y="62" fill="#fff" font-weight="700">users</text>
+<text x="42" y="91" fill="#1c2433" font-weight="700">PK id</text>
+<text x="42" y="115" fill="#1c2433">name</text>
+<text x="42" y="139" fill="#1c2433">email (unique)</text>
+<text x="42" y="163" fill="#1c2433">password</text>
+<text x="42" y="187" fill="#1c2433">role (admin|resident)</text>
+<text x="42" y="211" fill="#1c2433">phone</text>
+<text x="42" y="235" fill="#1c2433">address</text>
+<text x="42" y="259" fill="#1c2433">timestamps</text>
+<rect x="660" y="40" width="250" height="136" rx="6" fill="#f7f9fc" stroke="#14284b" stroke-width="1.5"/>
+<rect x="660" y="40" width="250" height="34" rx="6" fill="#14284b"/>
+<text x="672" y="62" fill="#fff" font-weight="700">service_categories</text>
+<text x="672" y="91" fill="#1c2433" font-weight="700">PK id</text>
+<text x="672" y="115" fill="#1c2433">name (unique)</text>
+<text x="672" y="139" fill="#1c2433">description</text>
+<text x="672" y="163" fill="#1c2433">timestamps</text>
+<rect x="345" y="40" width="270" height="280" rx="6" fill="#f7f9fc" stroke="#14284b" stroke-width="1.5"/>
+<rect x="345" y="40" width="270" height="34" rx="6" fill="#14284b"/>
+<text x="357" y="62" fill="#fff" font-weight="700">service_requests</text>
+<text x="357" y="91" fill="#1c2433" font-weight="700">PK id</text>
+<text x="357" y="115" fill="#1c2433">reference_no (unique)</text>
+<text x="357" y="139" fill="#8a5a00">FK user_id</text>
+<text x="357" y="163" fill="#8a5a00">FK service_category_id</text>
+<text x="357" y="187" fill="#1c2433">title</text>
+<text x="357" y="211" fill="#1c2433">description</text>
+<text x="357" y="235" fill="#1c2433">location</text>
+<text x="357" y="259" fill="#1c2433">status</text>
+<text x="357" y="283" fill="#1c2433">completed_at</text>
+<text x="357" y="307" fill="#1c2433">timestamps</text>
+<rect x="660" y="270" width="250" height="208" rx="6" fill="#f7f9fc" stroke="#14284b" stroke-width="1.5"/>
+<rect x="660" y="270" width="250" height="34" rx="6" fill="#14284b"/>
+<text x="672" y="292" fill="#fff" font-weight="700">request_updates</text>
+<text x="672" y="321" fill="#1c2433" font-weight="700">PK id</text>
+<text x="672" y="345" fill="#8a5a00">FK service_request_id</text>
+<text x="672" y="369" fill="#8a5a00">FK user_id (admin)</text>
+<text x="672" y="393" fill="#1c2433">old_status</text>
+<text x="672" y="417" fill="#1c2433">new_status</text>
+<text x="672" y="441" fill="#1c2433">remarks</text>
+<text x="672" y="465" fill="#1c2433">timestamps</text>
+<rect x="30" y="330" width="250" height="184" rx="6" fill="#f7f9fc" stroke="#14284b" stroke-width="1.5"/>
+<rect x="30" y="330" width="250" height="34" rx="6" fill="#14284b"/>
+<text x="42" y="352" fill="#fff" font-weight="700">notifications</text>
+<text x="42" y="381" fill="#1c2433" font-weight="700">PK id</text>
+<text x="42" y="405" fill="#8a5a00">FK user_id (resident)</text>
+<text x="42" y="429" fill="#8a5a00">FK service_request_id</text>
+<text x="42" y="453" fill="#1c2433">message</text>
+<text x="42" y="477" fill="#1c2433">read_at</text>
+<text x="42" y="501" fill="#1c2433">timestamps</text>
+<polyline points="280,100 345,100" fill="none" stroke="#1f4e8c" stroke-width="1.6"/>
+<text x="284" y="94" fill="#1f4e8c" font-weight="700">1</text>
+<text x="326" y="94" fill="#1f4e8c" font-weight="700">N</text>
+<polyline points="660,100 615,100" fill="none" stroke="#1f4e8c" stroke-width="1.6"/>
+<text x="642" y="94" fill="#1f4e8c" font-weight="700">1</text>
+<text x="618" y="94" fill="#1f4e8c" font-weight="700">N</text>
+<polyline points="615,230 640,230 640,320 660,320" fill="none" stroke="#1f4e8c" stroke-width="1.6"/>
+<text x="618" y="224" fill="#1f4e8c" font-weight="700">1</text>
+<text x="642" y="314" fill="#1f4e8c" font-weight="700">N</text>
+<polyline points="155,272 155,330" fill="none" stroke="#1f4e8c" stroke-width="1.6"/>
+<text x="160" y="270" fill="#1f4e8c" font-weight="700">1</text>
+<text x="160" y="322" fill="#1f4e8c" font-weight="700">N</text>
+<polyline points="345,250 310,250 310,400 280,400" fill="none" stroke="#1f4e8c" stroke-width="1.6"/>
+<text x="322" y="244" fill="#1f4e8c" font-weight="700">1</text>
+<text x="284" y="394" fill="#1f4e8c" font-weight="700">N</text>
+<polyline points="90,272 90,310 310,310 310,560 785,560 785,478" fill="none" stroke="#1f4e8c" stroke-width="1.6"/>
+<text x="76" y="262" fill="#1f4e8c" font-weight="700">1</text>
+<text x="790" y="552" fill="#1f4e8c" font-weight="700">N</text>
+<text x="30" y="590" fill="#5c677a" font-size="12">PK = primary key, FK = foreign key (gold). 1 / N marks the one-to-many side of each relationship.</text>
+</svg>
